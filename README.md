@@ -17,11 +17,11 @@ Este é um projeto para gerenciar competições de judocas. Ele permite cadastra
    git clone https://github.com/seu-usuario/Sistema-de-Judocas.git
    cd Sistema-de-Judocas
    
-Compile e instale as dependências:
+2. Compile e instale as dependências:
 mvn clean install
 Rode o sistema executando a classe principal (em src/main/java).
 
-Para rodar os testes automatizados:
+3. Para rodar os testes automatizados:
 mvn test
 
 Estrutura do Projeto
