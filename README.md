@@ -34,6 +34,7 @@ tests/: Testes automatizados do projeto.
 docs/: Documentação e diagramas.
 
 lib/: Bibliotecas externas (se necessário).
+
 -------------------------------
 
 Como Contribuir
