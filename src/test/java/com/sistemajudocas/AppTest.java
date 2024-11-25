@@ -1,4 +1,4 @@
-package com.sistemajudocas;
+package test.java.com.sistemajudocas;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
