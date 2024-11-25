@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.sistemajudocas</groupId>
   <artifactId>sistema-judocas</artifactId>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>sistema-judocas</name>
   <url>http://maven.apache.org</url>
