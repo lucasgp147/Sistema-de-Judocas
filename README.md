@@ -25,6 +25,7 @@ Rode o sistema executando a classe principal (em src/main/java).
 mvn test
 
 Estrutura do Projeto
+
 src/: Código-fonte principal.
 
 tests/: Testes automatizados do projeto.
