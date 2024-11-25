@@ -24,6 +24,7 @@ Rode o sistema executando a classe principal (em src/main/java).
 3. Para rodar os testes automatizados:
 mvn test
 
+-------------------------------
 Estrutura do Projeto
 
 src/: Código-fonte principal.
@@ -33,6 +34,7 @@ tests/: Testes automatizados do projeto.
 docs/: Documentação e diagramas.
 
 lib/: Bibliotecas externas (se necessário).
+-------------------------------
 
 Como Contribuir
 
