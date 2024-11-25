@@ -35,9 +35,13 @@ docs/: Documentação e diagramas.
 lib/: Bibliotecas externas (se necessário).
 
 Como Contribuir
+
 Faça um fork do repositório.
+
 Crie uma branch para sua contribuição:
+
 git checkout -b minha-branch
+
 Faça suas alterações e envie um Pull Request.
 
 
