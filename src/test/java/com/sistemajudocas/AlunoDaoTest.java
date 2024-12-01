@@ -110,24 +110,47 @@ public class AlunoDaoTest {
 	public void testListarEAdicionarAlunos(){
 		int qtd = alunoDao.list().size();
 		
-		alunoDao.save(new Aluno());
+		// Creating a new Aluno and assigning a Filiado object to avoid NullPointerException
+		Aluno newAluno1 = new Aluno();
+		Filiado f1 = new Filiado();
+		f1.setNome("Aluno 1");
+		newAluno1.setFiliado(f1);
+		alunoDao.save(newAluno1);
 		assertEquals(qtd+1, alunoDao.list().size());
 		
-		alunoDao.save(new Aluno());
+		// Repeat for other Aluno objects
+		Aluno newAluno2 = new Aluno();
+		Filiado f2 = new Filiado();
+		f2.setNome("Aluno 2");
+		newAluno2.setFiliado(f2);
+		alunoDao.save(newAluno2);
 		assertEquals(qtd+2, alunoDao.list().size());
 		
-		alunoDao.save(new Aluno());
+		Aluno newAluno3 = new Aluno();
+		Filiado f3 = new Filiado();
+		f3.setNome("Aluno 3");
+		newAluno3.setFiliado(f3);
+		alunoDao.save(newAluno3);
 		assertEquals(qtd+3, alunoDao.list().size());
 		
-		alunoDao.save(new Aluno());
+		Aluno newAluno4 = new Aluno();
+		Filiado f4 = new Filiado();
+		f4.setNome("Aluno 4");
+		newAluno4.setFiliado(f4);
+		alunoDao.save(newAluno4);
 		assertEquals(qtd+4, alunoDao.list().size());
 		
 		clearDatabase();
 		assertEquals(0, alunoDao.list().size());
 		
-		alunoDao.save(new Aluno());
+		Aluno newAluno5 = new Aluno();
+		Filiado f5 = new Filiado();
+		f5.setNome("Aluno 5");
+		newAluno5.setFiliado(f5);
+		alunoDao.save(newAluno5);
 		assertEquals(1, alunoDao.list().size());
 	}
+
 	
 	@Test
 	public void testSearchAluno() throws Exception{
