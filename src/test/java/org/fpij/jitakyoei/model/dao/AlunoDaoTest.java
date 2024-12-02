@@ -1,4 +1,4 @@
-package test.java.com.sistemajudocas;
+package test.java.org.fpij.jitakyoei.model.dao;
 
 import static org.junit.Assert.assertEquals;
 
@@ -110,7 +110,6 @@ public class AlunoDaoTest {
 	public void testListarEAdicionarAlunos(){
 		int qtd = alunoDao.list().size();
 		
-		// Creating a new Aluno and assigning a Filiado object to avoid NullPointerException
 		Aluno newAluno1 = new Aluno();
 		Filiado f1 = new Filiado();
 		f1.setNome("Aluno 1");
@@ -118,7 +117,6 @@ public class AlunoDaoTest {
 		alunoDao.save(newAluno1);
 		assertEquals(qtd+1, alunoDao.list().size());
 		
-		// Repeat for other Aluno objects
 		Aluno newAluno2 = new Aluno();
 		Filiado f2 = new Filiado();
 		f2.setNome("Aluno 2");
@@ -151,7 +149,6 @@ public class AlunoDaoTest {
 		assertEquals(1, alunoDao.list().size());
 	}
 
-	
 	@Test
 	public void testSearchAluno() throws Exception{
 		clearDatabase();
@@ -169,6 +166,7 @@ public class AlunoDaoTest {
 		clearDatabase();
 		assertEquals(0, alunoDao.search(a).size());
 	}
+	
 	
 	@AfterClass
 	public static void closeDatabase(){
