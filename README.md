@@ -5,7 +5,7 @@
 
 - Vinicius Gabriel Ferreira Lopes RA: 22.121.095-8
 
-# Sistema de Judocas
+# Sistema de Judocas ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/lucasgp147/Sistema-de-Judocas/maven.yml)
 
 Este é um projeto para gerenciar competições de judocas. Ele permite cadastrar judocas, registrar lutas e exibir os resultados finais das competições.
 
