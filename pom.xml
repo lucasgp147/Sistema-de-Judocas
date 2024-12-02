@@ -26,7 +26,7 @@
             <artifactId>forms</artifactId>
             <version>1.9.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}\lib\forms.jar</systemPath>
+            <systemPath>${project.basedir}/lib/forms.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.db4o</groupId>
