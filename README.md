@@ -21,12 +21,12 @@ Este é um projeto para gerenciar competições de judocas. Ele permite cadastra
 
 ## Como Rodar o Projeto
 1. Clone este repositório:
-   git clone https://github.com/seu-usuario/Sistema-de-Judocas.git
+   git clone https://github.com/lucasgp147/Sistema-de-Judocas.git
    cd Sistema-de-Judocas
    
 2. Compile e instale as dependências:
 mvn clean install
-Rode o sistema executando a classe principal (em src/main/java).
+Rode o sistema executando a classe principal (em src/main/java/org/fpij/jitakyoei/util/Main.java).
 
 3. Para rodar os testes automatizados:
 mvn test
@@ -34,9 +34,9 @@ mvn test
 -------------------------------
 Estrutura do Projeto
 
-src/: Código-fonte principal.
+src/main/java: Código-fonte principal.
 
-tests/: Testes automatizados do projeto.
+src/tests/java: Testes automatizados do projeto.
 
 docs/: Documentação e diagramas.
 
