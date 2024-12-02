@@ -1,3 +1,10 @@
+# GRUPO
+- Henrique Kenji RA: 22.121.030-5
+
+- Lucas Guglielmi Pereira RA: 22.121.013-1
+
+- Vinicius Gabriel Ferreira Lopes RA: 22.121.095-8
+
 # Sistema de Judocas
 
 Este é um projeto para gerenciar competições de judocas. Ele permite cadastrar judocas, registrar lutas e exibir os resultados finais das competições.
