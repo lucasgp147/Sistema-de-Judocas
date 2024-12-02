@@ -29,13 +29,18 @@ jobs:
       id: jacoco
       uses: cicirello/jacoco-badge-generator@v2.0.1
 
+    - name: Message on PR coverage Percent
+      run: |
+        echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
+        echo "branches = ${{ steps.jacoco.outputs.branches }}"
+        
     - name: Upload JaCoCo coverage report as a workflow artifact
       uses: actions/upload-artifact@v3
       with:
         name: jacoco-report
         path: target/site/jacoco/
 
-    - name: Comment on PR with coverage percentages
+    - name: Get Coverage Report
       if: ${{ github.event_name == 'pull_request' }}
       run: |
         REPORT=$(<badges/coverage-summary.json)
