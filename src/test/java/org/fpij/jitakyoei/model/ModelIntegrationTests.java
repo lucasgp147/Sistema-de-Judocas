@@ -1,4 +1,4 @@
-package test.java.com.sistemajudocas;
+package test.java.org.fpij.jitakyoei.model;
 
 import java.util.Date;
 
