@@ -18,6 +18,7 @@ public class FiliadoBeansTest {
     private static Filiado filiado1;
     private static Filiado filiado2;
     private static Filiado filiado3;
+    private static Filiado filiado4;
     private static Endereco endereco;
     private Rg rg;
     private static List<Faixa> faixas;
@@ -51,8 +52,12 @@ public class FiliadoBeansTest {
         filiado2.setNome("João");
 
         filiado3 = new Filiado();
-        filiado3.setId(4L);
+        filiado3.setId(1L);
         filiado3.setNome("Vini");
+
+        filiado4 = new Filiado();
+        filiado4.setId(4L);
+        filiado4.setNome("João");
     }
 
     @Test
@@ -163,7 +168,9 @@ public class FiliadoBeansTest {
     public void testEquals() {
         assertTrue(filiado1.equals(filiado2));
         assertFalse(filiado1.equals(filiado3));
+        assertFalse(filiado1.equals(filiado4));
         assertFalse(filiado1.equals(null));
+        assertFalse(filiado1.equals("Nulo"));
     }
 
     @Test

@@ -15,6 +15,7 @@ public class ProfessorEntidadeTest {
     private Professor professor2;
     private Entidade entidade1;
     private Entidade entidade2;
+    private Entidade entidade3;
     private ProfessorEntidade professorEntidade1;
     private ProfessorEntidade professorEntidade2;
     private ProfessorEntidade professorEntidade3;
@@ -41,6 +42,10 @@ public class ProfessorEntidadeTest {
         entidade2 = new Entidade();
         entidade2.setNome("Entidade 2");
 
+        entidade3 = new Entidade();
+        entidade3.setNome("Entidade 3");
+
+
         professorEntidade1 = new ProfessorEntidade(professor1, entidade1);
         professorEntidade2 = new ProfessorEntidade(professor1, entidade1);
         professorEntidade3 = new ProfessorEntidade(professor2, entidade2);
@@ -63,8 +68,11 @@ public class ProfessorEntidadeTest {
     @Test
     public void testEquals() {
         assertTrue(professorEntidade1.equals(professorEntidade2));
+        professorEntidade2.setEntidade(entidade3);
+        assertFalse(professorEntidade1.equals(professorEntidade2));
         assertFalse(professorEntidade1.equals(professorEntidade3));
         assertFalse(professorEntidade1.equals(null));
+        assertFalse(professorEntidade1.equals(""));
     }
 
     @Test

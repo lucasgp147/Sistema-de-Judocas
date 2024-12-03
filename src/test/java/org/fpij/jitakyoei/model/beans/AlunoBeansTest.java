@@ -14,8 +14,11 @@ public class AlunoBeansTest {
 
     private static Aluno aluno1;
     private static Aluno aluno2;
+    private static Aluno aluno3;
+    private static Aluno aluno4;
     private static Filiado filiado1;
     private static Filiado filiado2;
+    private static Filiado filiado3;
     private static Entidade entidade;
     private static Professor professor;
 
@@ -30,6 +33,9 @@ public class AlunoBeansTest {
         filiado2.setId(2L);
         filiado2.setNome("Maria");
 
+        filiado3 = new Filiado();
+        filiado3.setNome("Zé");
+
         entidade = new Entidade();
         professor = new Professor();
 
@@ -43,6 +49,20 @@ public class AlunoBeansTest {
         aluno2.setFiliado(filiado2);
         aluno2.setEntidade(entidade);
         aluno2.setProfessor(professor);
+
+        aluno3 = new Aluno();
+        aluno3.setFiliado(filiado3);
+        aluno3.setEntidade(entidade);
+        aluno3.setProfessor(professor);
+
+        Filiado filiado4 = new Filiado();
+        filiado2.setId(1L);
+        filiado4.setNome("Zé");
+
+        aluno4 = new Aluno();
+        aluno4.setFiliado(filiado4);
+        aluno4.setEntidade(entidade);
+        aluno4.setProfessor(professor);
     }
 
     @Test
@@ -81,12 +101,15 @@ public class AlunoBeansTest {
         assertTrue(aluno1.equals(alunoCopy));
         assertFalse(aluno1.equals(null));
         assertFalse(aluno1.equals(aluno2));
+        assertFalse(aluno1.equals(aluno3));
     }
 
     @Test
     public void testHashCode() {
-        int expectedHashCode = 29 * 7 + (int)(long)1L; // Filiado1 ID = 1L
+        int expectedHashCode = 29 * 7 + (int)(long)1L;
         assertEquals(expectedHashCode, aluno1.hashCode());
+        int expectedHashCode1 = 29 * 7 + 0;
+        assertEquals(expectedHashCode1, aluno3.hashCode());
     }
 
     @Test
