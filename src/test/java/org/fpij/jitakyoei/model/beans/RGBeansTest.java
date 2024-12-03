@@ -10,11 +10,13 @@ public class RGBeansTest {
 
     private Rg rg1;
     private Rg rg2;
+    private Rg rg3;
 
     @Before
     public void setUp() {
         rg1 = new Rg("123456789", "SSP");
         rg2 = new Rg("123456789", "SSP");
+        rg3 = new Rg("123456789", "SSP");
     }
 
     @Test
@@ -37,6 +39,9 @@ public class RGBeansTest {
 
         rg2.setNumero("987654321");
         assertFalse(rg1.equals(rg2));
+
+        rg3.setOrgaoExpedidor("Nothing");
+        assertFalse(rg1.equals(rg3));
         assertFalse(rg1.equals(null));
         assertFalse(rg1.equals("not a Rg"));
     }

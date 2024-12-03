@@ -20,7 +20,7 @@ public class Professor {
 	@Override
 	public int hashCode() {
 		int hash = 7;
-		return 29 * hash +(this.filiado.getId() != null ? (int)(long)this.filiado.getId() : 0);
+		return 29 * hash +( this.filiado.getId() != null ? (int)(long)this.filiado.getId() : 0);
 	}
 
 	public Filiado getFiliado() {

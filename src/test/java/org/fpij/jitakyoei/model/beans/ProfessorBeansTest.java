@@ -16,8 +16,10 @@ public class ProfessorBeansTest {
     private Professor professor1;
     private Professor professor2;
     private Professor professor3;
+    private Professor professor4; 
     private Filiado filiado1;
     private Filiado filiado2;
+    private Filiado filiado3;
     private List<Entidade> entidades;
 
     @Before
@@ -30,6 +32,9 @@ public class ProfessorBeansTest {
         filiado2.setId(2L);
         filiado2.setNome("Maria");
 
+        filiado3 = new Filiado();
+        filiado3.setNome("Vini");
+
         professor1 = new Professor();
         professor1.setFiliado(filiado1);
 
@@ -38,6 +43,9 @@ public class ProfessorBeansTest {
 
         professor3 = new Professor();
         professor3.setFiliado(filiado2);
+
+        professor4 = new Professor();
+        professor4.setFiliado(filiado3);
 
         entidades = new ArrayList<>();
         entidades.add(new Entidade());
@@ -70,6 +78,7 @@ public class ProfessorBeansTest {
     public void testHashCode() {
         assertEquals(professor1.hashCode(), professor2.hashCode());
         assertNotEquals(professor1.hashCode(), professor3.hashCode());
+        assertNotEquals(professor1.hashCode(), professor4.hashCode());
     }
 
     @Test
